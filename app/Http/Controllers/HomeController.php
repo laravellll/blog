@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\LatestBlog;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
    public function blogpage(){
-       return view('frontend.main');
+     $blog=LatestBlog::all();
+       return view('frontend.main',['key'=>$blog]);
    }
 
    public function orderpage(){

@@ -25,7 +25,7 @@ Route::get('/dashboard','DashBoardController@Dashboard')->name('dashboard');
 Route::get('/create','DashBoardController@create')->name('createForm');
 Route::post('/dataCreate','DashBoardController@dataCreate');
 Route::get('/blog-delete/{id?}','DashBoardController@delete')->name('blog-delete');
-Route::get('/view/{id?}','DashBoardController@delete')->name('view');
+Route::get('/edit/{id?}','DashBoardController@edit')->name('edit');
 
 
 

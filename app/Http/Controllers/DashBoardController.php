@@ -55,4 +55,11 @@ class DashBoardController extends Controller
            return redirect()->back();
        }
     }
+    public function edit($id){
+        $u=LatestBlog::where(['id' => $id])->first();
+        if($u){
+            return view('backend.blog.edit', ['v'=>$u]);
+        }
+
+    }
 }

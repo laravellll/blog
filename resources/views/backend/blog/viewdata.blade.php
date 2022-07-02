@@ -46,7 +46,7 @@
 
                         <td>
                           <a type="button" href="{{url('blog-delete', $value->id)}}" class="btn btn-danger">Delete</i></a>
-                          <a type="button" href="{{url('view', $value->id)}}" class="btn btn-primary">view</a>
+                          <a type="button" href="{{url('edit', $value->id)}}" class="btn btn-primary">Edit</a>
                        </td>
                
                     </tr>
