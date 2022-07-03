@@ -5,22 +5,23 @@
 <table class="table">
   <br>
   
-  <form class="needs-validation" novalidate>
+  <form role="form" Action="{{url('dataUpdate')}}" method="post" id="quickForm" enctype="multipart/form-data">
+@csrf
 
     <div class="form-group">
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">name</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="{{$v->author}}" >
+        <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="First name" value="{{$v->author}}" >
       </div>
 
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">Title</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="{{$v->title}}" >
+        <input type="text" name="title" class="form-control" id="validationCustom01" placeholder="First name" value="{{$v->title}}" >
       </div>
 
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">description</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="{{$v->description}}" >
+        <input type="text" name="description" class="form-control" id="validationCustom01" placeholder="First name" value="{{$v->description}}" >
       </div>
 
       <div class="col-md-4 mb-3">
@@ -29,11 +30,10 @@
       <img src="{{ asset($v->image) }}" width="110px" height="80px" alt="no image"/>
     </div>
 
-    <div class="form-row">
-     
-     
+    <input type="hidden" name="id" class="form-control" id="validationCustom01" value="{{$v->id}}" ><br>
 
-      
+    <div class="form-row">
+   
     </div>
 
     <br>
